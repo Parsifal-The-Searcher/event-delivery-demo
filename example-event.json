@@ -1,0 +1,6 @@
+{
+  "id": "evt-order-001",
+  "type": "order.updated",
+  "record_id": "DEMO-1001",
+  "data": {"status": "packed", "units": 3}
+}

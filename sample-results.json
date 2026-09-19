@@ -1,0 +1,73 @@
+{
+  "first_delivery": "accepted",
+  "duplicate_delivery": "duplicate",
+  "conflicting_delivery": "rejected",
+  "failed_attempt": {
+    "event_id": "evt-order-001",
+    "state": "retryable",
+    "attempts": 1,
+    "error": "Injected failure after upsert"
+  },
+  "records_after_failure": 0,
+  "fresh_process_retry": [
+    {
+      "event_id": "evt-order-001",
+      "state": "done",
+      "attempts": 2
+    }
+  ],
+  "remaining_work": [
+    {
+      "event_id": "evt-crm-001",
+      "state": "done",
+      "attempts": 1
+    },
+    {
+      "event_id": "evt-order-002",
+      "state": "done",
+      "attempts": 1
+    }
+  ],
+  "final": {
+    "inbox": [
+      {
+        "event_id": "evt-order-001",
+        "state": "done",
+        "attempts": 2,
+        "last_error": null
+      },
+      {
+        "event_id": "evt-crm-001",
+        "state": "done",
+        "attempts": 1,
+        "last_error": null
+      },
+      {
+        "event_id": "evt-order-002",
+        "state": "done",
+        "attempts": 1,
+        "last_error": null
+      }
+    ],
+    "records": [
+      {
+        "record_type": "crm",
+        "record_id": "DEMO-CRM-01",
+        "last_event_id": "evt-crm-001",
+        "data": {
+          "organization": "Synthetic Shop",
+          "stage": "qualified"
+        }
+      },
+      {
+        "record_type": "order",
+        "record_id": "DEMO-1001",
+        "last_event_id": "evt-order-002",
+        "data": {
+          "status": "shipped",
+          "units": 3
+        }
+      }
+    ]
+  }
+}
