@@ -8,6 +8,12 @@ Everything runs locally using Python's standard library and one SQLite file.
 The example records are synthetic. There are no network calls, real customer
 accounts, or financial actions.
 
+For a paid repair of an existing Python workflow, see the
+[US$150 scoped repair offer on Fiverr](https://www.fiverr.com/parsifalworkspa/fix-one-reproducible-python-workflow-reliability-bug).
+Message there with a local reproduction before ordering so the bug and acceptance
+checks can be agreed. The package includes a focused patch, regression test and run
+instructions, with three-day delivery and one revision within the agreed scope.
+
 ## Run it
 
 From this folder, with Python 3.10 or newer:
